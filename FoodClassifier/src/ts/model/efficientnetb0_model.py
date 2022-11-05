@@ -1,3 +1,17 @@
+import tensorflow as tf
+import os
+import numpy as np
+import pandas as np
+from matplotlib import pyplot as plt
+import tensorflow_datasets as tfds
+from tensorflow.keras import mixed_precision
+from tensorflow.keras import layers
+
+import datetime
+
+print(tf.__version__)
+INPUT_SHAPE = (224, 224, 3)
+
 checkpoint_path = "model_checkpoints/cp.ckpt"
 model_checkpoint = tf.keras.callbacks.ModelCheckpoint(checkpoint_path,
                                                       monitor="val_accuracy",

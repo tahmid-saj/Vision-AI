@@ -1,3 +1,9 @@
+import matplotlib.pyplot as plt
+import datetime
+import numpy as np
+import tensorflow as tf
+import pandas as pd
+
 def create_tensorboard_callback(dir_name, experiment_name):
     """
     Creates a TensorBoard callback instand to store log files.
